@@ -24,7 +24,7 @@ fn _largest_char(list: &[char]) -> char {
     }
     largest
 }
-// We can also see that the largest fn is also a duplicate code we can reduce this to one fn 
+// We can also see that the largest fn is also a duplicate code we can reduce this to one fn, this limit the code to types that implement the Copy trait  and PartialOrd traits
 fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
     for &item in list.iter() {
